@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:transaction/ui/partials/home_card.dart';
 import 'package:transaction/ui/partials/styles.dart';
 
 class HomeView extends StatelessWidget {
@@ -69,7 +70,7 @@ class HomeView extends StatelessWidget {
                               ),
                             ],
                           ),
-                        )
+                        ),
                       ],
                     ),
                     // TODO: Need graph also in dashboard
@@ -78,7 +79,37 @@ class HomeView extends StatelessWidget {
                 ),
               ),
             ),
-            // Padding()
+            Padding(
+              padding: EdgeInsets.fromLTRB(15, 20, 15, 20),
+              child: Column(
+                children: <Widget>[
+                  HomeCard(
+                    icon: Icons.star,
+                    color: Colors.amber,
+                    title: 'BEST PRODUCT SELLER',
+                    month: 'NOVEMBER',
+                    itemLabel: 'Macbook Pro 2018',
+                    tagline: '40 ITEMS',
+                  ),
+                  HomeCard(
+                    icon: Icons.shopping_basket,
+                    color: Colors.greenAccent,
+                    title: 'TOTAL ITEMS SOLD',
+                    month: 'NOVEMBER',
+                    itemLabel: '143 ITEMS',
+                    tagline: 'BEST OF MONTH',
+                  ),
+                  HomeCard(
+                    icon: Icons.stars,
+                    color: Colors.redAccent,
+                    title: 'BEST PRODUCT SELLER',
+                    month: 'NOVEMBER',
+                    itemLabel: 'Macbook Pro 2018',
+                    tagline: '40 ITEMS',
+                  ),
+                ],
+              ),
+            )
           ],
         ),
       ),

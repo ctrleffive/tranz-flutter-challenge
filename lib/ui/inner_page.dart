@@ -13,7 +13,7 @@ class InnerPage extends StatefulWidget {
 }
 
 class InnerPageState extends State<InnerPage> {
-  final StreamController<int> navigationIndex = StreamController<int>();
+  final StreamController<int> navigationIndex = StreamController<int>.broadcast();
 
   @override
   void dispose() {
@@ -26,6 +26,7 @@ class InnerPageState extends State<InnerPage> {
     return Scaffold(
       body: StreamBuilder(
         initialData: 0,
+        stream: this.navigationIndex.stream,
         builder: (BuildContext context, AsyncSnapshot<int> navigationSnapshot) {
           switch (navigationSnapshot.data) {
             case 0:
@@ -51,43 +52,50 @@ class InnerPageState extends State<InnerPage> {
         elevation: 0,
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: 0,
-        type: BottomNavigationBarType.fixed,
-        items: [
-          BottomNavigationBarItem(
-            icon: SizedBox(
-              height: 40,
-              child: Icon(Icons.home),
-            ),
-            title: SizedBox()
-          ),
-          BottomNavigationBarItem(
-            icon: SizedBox(
-              height: 40,
-              child: Icon(Icons.list),
-            ),
-            title: SizedBox()
-          ),
-          BottomNavigationBarItem(
-            icon: SizedBox(),
-            title: SizedBox()
-          ),
-          BottomNavigationBarItem(
-            icon: SizedBox(
-              height: 40,
-              child: Icon(Icons.notifications),
-            ),
-            title: SizedBox()
-          ),
-          BottomNavigationBarItem(
-            icon: SizedBox(
-              height: 40,
-              child: Icon(Icons.person),
-            ),
-            title: SizedBox()
-          ),
-        ],
+      bottomNavigationBar: StreamBuilder(
+        initialData: 0,
+        stream: this.navigationIndex.stream,
+        builder: (BuildContext context, AsyncSnapshot<int> navigationSnapshot) {
+          return BottomNavigationBar(
+            currentIndex: navigationSnapshot.data,
+            type: BottomNavigationBarType.fixed,
+            onTap: (int pageIndex) => this.navigationIndex.sink.add(pageIndex),
+            items: [
+              BottomNavigationBarItem(
+                icon: SizedBox(
+                  height: 40,
+                  child: Icon(Icons.home),
+                ),
+                title: SizedBox()
+              ),
+              BottomNavigationBarItem(
+                icon: SizedBox(
+                  height: 40,
+                  child: Icon(Icons.list),
+                ),
+                title: SizedBox()
+              ),
+              BottomNavigationBarItem(
+                icon: SizedBox(),
+                title: SizedBox()
+              ),
+              BottomNavigationBarItem(
+                icon: SizedBox(
+                  height: 40,
+                  child: Icon(Icons.notifications),
+                ),
+                title: SizedBox()
+              ),
+              BottomNavigationBarItem(
+                icon: SizedBox(
+                  height: 40,
+                  child: Icon(Icons.person),
+                ),
+                title: SizedBox()
+              ),
+            ],
+          );
+        },
       ),
     );
   }

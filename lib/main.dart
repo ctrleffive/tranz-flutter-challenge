@@ -13,7 +13,9 @@ class App extends StatelessWidget {
         primaryColor: Color.fromRGBO(24, 180, 178, 1),
         accentColor: Color.fromRGBO(255, 201, 0, 1),
         scaffoldBackgroundColor: Color.fromRGBO(248, 249, 250, 1),
-        fontFamily: 'NunitoSans'
+        fontFamily: 'NunitoSans',
+        textTheme: TextTheme(body1: TextStyle(color: Color.fromRGBO(68, 68, 68, 1))),
+        iconTheme: IconThemeData(color: Color.fromRGBO(68, 68, 68, 1))
       ),
       home: LandingPage(),
     );

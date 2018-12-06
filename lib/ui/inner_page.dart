@@ -1,9 +1,9 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:transaction/ui/home_view.dart';
-import 'package:transaction/ui/notifications_view.dart';
-import 'package:transaction/ui/profile_view.dart';
-import 'package:transaction/ui/transactions_view.dart';
+import 'package:transaction/ui/home_views/dash_view.dart';
+import 'package:transaction/ui/home_views/notifications_view.dart';
+import 'package:transaction/ui/home_views/profile_view.dart';
+import 'package:transaction/ui/home_views/transactions_view.dart';
 
 class InnerPage extends StatefulWidget {
   @override
@@ -30,16 +30,18 @@ class InnerPageState extends State<InnerPage> {
         builder: (BuildContext context, AsyncSnapshot<int> navigationSnapshot) {
           switch (navigationSnapshot.data) {
             case 0:
-              return HomeView();
+              return DashView();
               break;
             case 1:
               return TransactionsView();
               break;
-            case 2:
+            case 3:
               return NotificationsView();
               break;
-            case 3:
+            case 4:
               return ProfileView();
+              break;
+            default:
               break;
           }
         },

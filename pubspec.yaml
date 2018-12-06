@@ -1,7 +1,7 @@
 name: transaction
 description: A Transaction App
 
-version: 1.0.0+1
+version: 0.2.5
 
 environment:
   sdk: ">=2.0.0-dev.68.0 <3.0.0"

@@ -1,16 +1,7 @@
-# transaction
+# TRANZ
 
-A new Flutter project.
+![version](https://img.shields.io/badge/beta-0.2.5-yellow.svg)
 
-## Getting Started
+A simple transaction app based on the design [Tranz - Transaction App](https://www.uplabs.com/posts/tranz-transaction-app) by [Muhammad Wildan Wari](https://www.uplabs.com/wildanwari)
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.io/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.io/docs/cookbook)
-
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.io/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+![design](https://assets.materialup.com/uploads/bb81057f-42a4-4be3-ad9c-9f8e980845ec/preview.png "Design")

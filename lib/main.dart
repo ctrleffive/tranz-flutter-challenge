@@ -10,7 +10,8 @@ class App extends StatelessWidget {
       title: 'Transaction App',
       theme: ThemeData(
         primaryColor: Color.fromRGBO(24, 180, 178, 1),
-        accentColor: Color.fromRGBO(255, 201, 0, 1)
+        accentColor: Color.fromRGBO(255, 201, 0, 1),
+        scaffoldBackgroundColor: Color.fromRGBO(248, 249, 250, 1)
       ),
       home: LandingPage(),
     );

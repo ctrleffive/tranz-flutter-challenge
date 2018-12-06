@@ -13,3 +13,6 @@ dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/landing_page_decoration.png
+    - assets/landing_page_logo.png

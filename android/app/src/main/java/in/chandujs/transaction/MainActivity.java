@@ -1,4 +1,4 @@
-package in.chandujs.transaction;
+package in.chandujs.demo.tranz;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;

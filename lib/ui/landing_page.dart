@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:transaction/ui/inner_page.dart';
+import 'package:transaction/ui/partials/styles.dart';
 
 class LandingPage extends StatelessWidget {
   @override
@@ -11,21 +12,14 @@ class LandingPage extends StatelessWidget {
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height,
             decoration: BoxDecoration(
-              gradient: LinearGradient(
-                colors: [
-                  Color.fromRGBO(72, 229, 201, 1),
-                  Color.fromRGBO(0, 156, 166, 1),
-                ],
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-              ),
+              gradient: appGradient,
             ),
             child: Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Image(
-                    image: AssetImage('assets/landing_page_logo.png'),
+                    image: AssetImage('assets/images/landing_page_logo.png'),
                     width: 202,
                     height: 160,
                   ),
@@ -46,15 +40,7 @@ class LandingPage extends StatelessWidget {
               ),
             ),
           ),
-          Positioned(
-            right: 30,
-            bottom: 30,
-            child: Image(
-              image: AssetImage('assets/landing_page_decoration.png'),
-              width: 130,
-              height: 86,
-            ),
-          ),
+          gradientDecoration,
         ],
       ),
     );

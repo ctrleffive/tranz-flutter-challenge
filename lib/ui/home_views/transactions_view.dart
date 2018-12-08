@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:transaction/ui/partials/month_section.dart';
+import 'package:transaction/ui/partials/single_product_mega.dart';
 
 class TransactionsView extends StatelessWidget {
   @override
@@ -34,6 +36,24 @@ class TransactionsView extends StatelessWidget {
                     ),
                   ],
                 ),
+              ),
+              MonthSection(
+                day: 17,
+                month: 'NOVEMBER',
+                items: [
+                  SingleProductMega(title: 'Macbook Pro 2018', thumb: 'https://placeimg.com/212/206/tech/1'),
+                  SingleProductMega(title: 'Laptop', thumb: 'https://placeimg.com/212/206/tech/2'),
+                  SingleProductMega(title: 'iPhone SE', thumb: 'https://placeimg.com/212/206/tech/3'),
+                ]
+              ),
+              MonthSection(
+                day: 18,
+                month: 'NOVEMBER',
+                items: [
+                  SingleProductMega(title: 'iPhone SE', thumb: 'https://placeimg.com/212/206/tech/6'),
+                  SingleProductMega(title: 'Macbook Pro 2018', thumb: 'https://placeimg.com/212/206/tech/4'),
+                  SingleProductMega(title: 'Laptop', thumb: 'https://placeimg.com/212/206/tech/5'),
+                ]
               ),
             ],
           ),

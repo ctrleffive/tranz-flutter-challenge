@@ -6,4 +6,4 @@ A simple transaction app based on the design [Tranz - Transaction App](https://w
 
 ### Application Screenshots
 
-![screenshots](#)
+![screenshots](https://raw.githubusercontent.com/cujslive/flutter-demo-tranz/master/screenshots.jpg)

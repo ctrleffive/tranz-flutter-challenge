@@ -11,7 +11,7 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^0.1.2
   cached_network_image: ^0.5.1
-  flutter_slidable: 0.4.9
+  flutter_slidable: 0.5.4
 
 flutter:
   uses-material-design: true
